@@ -1,0 +1,476 @@
+@import './variables.scss/variables.scss';
+
+
+body{
+
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 74% 24%;
+    grid-template-rows: 9% 88%;
+    align-items: center;
+    row-gap: 1vh;
+    padding: 0 1vw;
+    grid-template-areas: 
+    "a a"
+    "b b";
+    background-image: url(../asset/wallpaper/mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+header{
+    position: relative;
+    display: grid;
+    grid-area: a;
+    grid-template-areas: 
+    "left right";
+    grid-template-columns: 35% 65%;
+    justify-items: center;
+    align-items: center;
+    cursor: default;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 8px 16px;
+        background-color: $txt-background;
+        border-radius: 15px;
+
+        span{
+            width: 40px;
+            height: 40px;
+            background-image: url(../asset/icons/favicon.png);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    h1{
+        grid-area: left;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    nav{
+        display: none;
+        justify-content: space-evenly;
+        width: 100%;
+
+        a{
+            width: auto;
+
+            font-size: 1.7rem;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            color: white;
+            transition: all 0.7s ease 0s;
+            
+        }
+        a:hover{
+            border: 1px solid $primary-color;
+            background-color: $txt-background;
+            padding: 5px 10px;
+            font-size: 1.9rem;
+        }
+    }
+
+    button{
+        grid-area: right;
+        justify-self: flex-end;
+        margin-right: 50px;
+        padding: 8px 16px;
+        border: 1px solid $primary-color;
+        border-radius: 6px;
+        background-color: $txt-background;
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    button:hover{
+        border: 1px solid $secondary-color;
+        border-radius: 6px;
+        background-color: $primary-color;
+        color: $terciary-color;
+    }
+
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-area: b;
+    padding: 5px 15px;
+    grid-template-columns: 3fr;
+
+
+    
+    section{
+        overflow: auto;
+        grid-auto-rows: 20%;
+        width: 100%;
+        height:100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+
+        article{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 280px;
+            position: relative;
+            padding: 5px;
+            border: 1px solid white;
+            border-radius: 7px;
+            background-color: $txt-background;
+            transition: all 1s ease 0s;
+
+            img{
+                transition: all 1s ease 0s;
+                width: 90%;
+                height: 90%;
+            }
+
+            h2{
+                transition: all 1s ease 0s;
+                position: absolute;
+                bottom: 5px;
+                width: 170px;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                background-color: $txt-background;
+                color: $primary-color;
+                border-radius: 25px;
+            }
+
+        }
+
+        article:hover{
+            border: 1px solid red;
+
+            img{
+                width: 95%;
+            }
+
+            h2{
+                color: red;
+            }
+        }
+    }
+
+    section::-webkit-scrollbar {
+        width: 8px;     
+        height: 8px;    
+        display: flex;
+    }
+
+    section::-webkit-scrollbar-thumb {
+        background: #0a5d8d;
+        border-radius: 4px;
+    }
+
+    section::-webkit-scrollbar-thumb:hover {
+        background: #033dfc;
+        box-shadow: 0 0 2px 1px #00000025;
+    }
+
+    section::-webkit-scrollbar-thumb:active {
+        background-color: #0400ff;
+    }
+
+    section::-webkit-scrollbar-track {
+        background: #1d203b;
+        border-radius: 4px;
+    }
+
+}
+
+aside{
+    display: none;
+    height: 96%;
+    margin-top: 1vh;
+    overflow: auto;
+    grid-area: b;
+    padding: 5px 10px;
+    flex-direction: column;
+    width: 100%;
+    background-color: $txt-background;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    .navlist__guides{
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: white;
+        cursor: pointer;
+
+        #container__class-guides{
+            display: none;
+            flex-direction: column;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                font-weight: 500;
+                margin-top: 5px;
+                margin-left: 5px;
+                cursor: default;
+    
+                li{
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    padding: 0 15px;
+                    align-items: center;
+                    list-style:inside;
+                    color: $primary-color;
+                    cursor: pointer;
+                    
+                    a{
+                        color: $primary-color;
+                        font-weight: 300;
+                    }
+                }
+
+            }
+
+        }
+
+        #container__raid-guides{
+            display: none;
+            flex-direction: column;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                margin-top: 5px;
+                margin-left: 5px;
+                font-size: 1.9rem;
+                font-weight: 500;
+                text-align: justify;
+                cursor: default;
+
+                li{
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    padding: 0 15px;
+                    align-items: center;
+                    list-style:inside;
+                    color: $primary-color;
+                    cursor: pointer;
+                    
+                    a{
+                        color: $primary-color;
+                        font-weight: 300;
+                    }
+                }
+
+                li:hover{
+                    a{
+                        color: red;
+                    }
+                }
+            }
+
+        }
+
+        #container__leveling-guides{
+            display: none;
+            flex-direction: column;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                margin-top: 5px;
+                margin-left: 5px;
+                font-size: 1.9rem;
+                text-align: justify;
+                cursor: default;
+
+                li{
+                    display: flex;
+                    width: 100%;
+                    gap: 20px;
+                    padding: 0 15px;
+                    align-items: center;
+                    list-style:inside;
+                    color: $primary-color;
+                    cursor: pointer;
+                    
+                    a{
+                        font-weight: 300;
+                        color: $primary-color;
+                    }
+                }
+
+                li:hover{
+                    a{
+                        color: red;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+aside::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;
+}
+
+aside .navlist__guides #container__leveling-guides,
+aside .navlist__guides #container__class-guides{
+
+    ul{
+        li{
+            span{
+                display: flex;
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+    
+                img {
+                    @include class-icon();
+                }
+    
+            }
+        }
+        
+        li:hover{
+            span{
+                border: 1px solid red;
+            }
+            a{
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width:425px) {
+    main section article{
+        h2{
+            width: 250px;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    header{
+        nav{
+            display: flex;
+        }
+
+        button, ul{
+            display: none;
+        }
+    }
+
+    body{
+        grid-template-areas: 
+        "a a"
+        "b c";
+        background-image: url(../asset/wallpaper/tablet.jpg);
+    }
+
+    main section article h2{
+        width: 270px;
+        font-size: 2.7rem;
+
+    }
+
+    aside{
+        display: flex;
+        grid-area: c;
+    }
+
+}
+
+@media (min-width:1024px) {
+    body{
+        background-image: url(../asset/wallpaper/desktop.jpg);
+        background-position: center;
+    }
+
+    main{
+
+        section{
+
+            article{
+                height: 300px;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                width: 80%;
+                margin-top: 5px;
+                padding: 10px;
+                border: 1px solid white;
+                border-radius: 7px;
+                cursor: pointer;
+        
+                img{
+                    width: 100%;
+                    height: 280px;
+                    background-size: cover;
+                }
+        
+                h2{
+                    width: 100%;
+                    position: relative;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 3rem;
+                    background-color: transparent;
+        
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+@media (min-width:1200px) {
+    body{
+        max-width: 1400px;
+        height: 100vh;
+        margin: 0 auto;
+
+        background-image: url(../asset/wallpaper/xl.jpg);
+    }
+
+    aside{
+        .navlist__guides{
+            font-size: 2.5rem;
+        }
+    }
+}

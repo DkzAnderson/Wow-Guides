@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" 
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>Guides-Wow</title>
+</head>
+<body >
+
+    <header>
+        <div>
+            <span></span>
+            <h1>Guides-Wow</h1>
+        </div>
+        
+        <button onclick="menu()" id="header-button">menu</button>
+    </header>
+    <main>
+
+        <section id="container-articles">
+            <article onclick="principalArticles('ICC25H')">
+                <img loading="lazy" 
+                src="./asset/dungeons/ICC.jpg" 
+                alt="Guia de banda ICC 25H">
+
+                <h2 >Guia de Banda: <br>ICC 25H</h2>
+            </article>
+
+            <article onclick="principalArticles('ToC25H')">
+                <img loading="lazy" 
+                src="./asset/dungeons/TOC.jpg" 
+                alt="Guia de TOC 25H">
+
+                <h2 >Guia de Banda: <br>TOC 25H</h2>
+            </article>
+
+            <article onclick="principalArticles('Rubi25H')">
+                <img loading="lazy" 
+                src="./asset/dungeons/Sagrario-Ruby.jpg" 
+                alt="Guia de Sagrario Rubí 25H">
+
+                <h2 >Guia de Banda: <br>Sagrario Rubí 25H</h2>
+            </article>
+
+            <article onclick="principalArticles('WarFury')">
+                <img loading="lazy" 
+                src="./asset/characters/warrior-fury.jpg" 
+                alt="Guia de guerrero Furia PvE">
+
+                <h2 >Guia de Guerrero Furia PvE</h2>
+            </article>
+
+            <article onclick="principalArticles('HuntAim')">
+                <img loading="lazy" 
+                src="./asset/characters/hunter-punteria-pve.jpg" 
+                alt="Guia de Cazador Punteria PvE">
+
+                <h2 >Guia de Cazador Punteria PvE</h2>
+            </article>
+
+            <article onclick="principalArticles('DkFrost')">
+                <img loading="lazy" 
+                src="./asset/characters/dk-frost.jpg" 
+                alt="Guia de Dk Escarcha PvE">
+
+                <h2 >Guia de Dk Escarcha PvE</h2>
+            </article>
+
+            <article onclick="principalArticles('LvlHorde')">
+                <img loading="lazy" 
+                src="./asset/characters/rogue-assasin.jpg" 
+                alt="Guia de Leveo Horda">
+
+                <h2 >Guia de Leveo:<br>Horda</h2>
+            </article>
+
+            <article onclick="principalArticles('LvlAli')">
+                <img loading="lazy" 
+                src="./asset/characters/paladin-repre.jpg" 
+                alt="Guia de Leveo Alianza">
+
+                <h2 >Guia de Leveo:<br>Alianza</h2>
+            </article>
+
+
+            <!-- colocar al menos 3 articulos de cada tipo de guía-->
+        </section>
+
+    </main>
+
+    <aside class="navlist">
+            <div onclick="showClassGuides()" class="navlist__guides">Guias de clase PvE
+                <div id="container__class-guides">
+                    <ul>Caballero de la muerte
+                        <li>
+                            <span class="death-kinght__frost">
+                                <img loading="lazy" src="./asset/icons/dk-frost-icon.jpg" 
+                                alt="Caballero de la muerte icon">
+                            </span>
+                            <a  
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=33078.0">
+                                Escarcha
+                            </a>
+                        </li>
+                        <li>
+                            <span class="death-kinght__unholy">
+                                <img loading="lazy" src="./asset/icons/dk-unholy-icon.jpg" 
+                                alt="Caballero de la muerte profano icon">
+                            </span>
+                            <a
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=46108.0">
+                                Profano
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul>Guerrero
+                        <li>
+                            <span class="warrior-fury">
+                                <img loading="lazy" src="./asset/icons/warrior-fury-icon.jpg" 
+                                alt="Guerrero furia icon">
+                            </span>
+                            <a
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=43969.0">
+                                Furia
+                            </a>
+                        </li>
+                        <li>
+                            <span class="warrior-protect">
+                                <img loading="lazy" src="./asset/icons/warrior-protect-icon.jpg"
+                                alt="Guerrero Protección icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=47894.0">
+                                Protección
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Mago
+                        <li>
+                            <span class="mage-fire">
+                                <img loading="lazy" src="./asset/icons/mage-fire-icon.jpg" 
+                                alt="mago fuego icon">
+                            </span>
+                            <a
+                            target="_blank" href="https://es.slideshare.net/GonzaloTeruelGonzale/guia-mago-fuego-237201205">
+                                Fuego
+                            </a>
+                        </li>
+                        <li>
+                            <span class="mage-arcane">
+                                <img loading="lazy" src="./asset/icons/mage-arcane-icon.jpg" 
+                                alt="mago arcano icon">
+                            </span>
+                            <a
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=41096.0">
+                                Arcano
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Brujo
+                        <li>
+                            <span class="warlock-demon">
+                                <img loading="lazy" src="./asset/icons/warlock-demon-icon.jpg" 
+                                alt="Brujo Demonología icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=45732.0">
+                                Demonología
+                            </a>
+                        </li>
+                        <li>
+                            <span class="warlock-afli">
+                                <img loading="lazy" src="./asset/icons/warlock-afli-icon.jpg"
+                                 alt="Brujo Aflicción icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=60050.0">
+                                Aflicción
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Cazador
+                        <li>
+                            <span class="hunter-aim">
+                                <img loading="lazy" src="./asset/icons/hunter-aim-icon.jpg" 
+                                alt="Cazador Punteria icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://demoniclords.foroactivo.com/t32-guia-cazador-pve-3-3-5-por-xkylar">
+                                Punteria
+                            </a>
+                        </li>
+                        <li>
+                            <span class="hunter-beast">
+                                <img loading="lazy" src="./asset/icons/hunter-beast-icon.jpg" 
+                                alt="Cazador Bestias icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=46073.0">
+                                Bestias
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Chaman
+                        <li>
+                            <span class="shaman-elemental">
+                                <img loading="lazy" src="./asset/icons/shaman-elemental-icon.jpg" 
+                                alt="Chaman Elemental icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=46075.0">
+                                Elemental
+                            </a>
+                        </li>
+                        <li>
+                            <span class="shaman-resto">
+                                <img loading="lazy" src="./asset/icons/shaman-resto-icon.jpg" 
+                                alt="Chaman Restauración icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=46078.0">
+                                Restauración
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Sacerdote
+                        <li>
+                            <span class="priest-shadow">
+                                <img loading="lazy" src="./asset/icons/priest-shadow-icon.jpg" 
+                                alt="Sacerdote Sombras icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=48375.0">
+                                Sombras
+                            </a>
+                        </li>
+                        <li>
+                            <span class="priest-disci">
+                                <img loading="lazy" src="./asset/icons/priest-disci-icon.jpg"
+                                 alt="Sacerdote Disciplina icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=42776.0">
+                                Disciplina
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Druida
+                        <li>
+                            <span class="druid-balance">
+                                <img loading="lazy" src="./asset/icons/druid-balance-icon.jpg" 
+                                alt="Druida Equilibrio icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=37393.0">
+                                Equilibrio
+                            </a>
+                        </li>
+                        <li>
+                            <span class="druid-resto">
+                                <img loading="lazy" src="./asset/icons/druid-resto-icon.jpg"
+                                 alt="Druida Restauración icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=50000.0">
+                                Restauración
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Pícaro
+                        <li>
+                            <span class="rogue-combat">
+                                <img loading="lazy" src="./asset/icons/rogue-combat-icon.jpg" 
+                                alt="Pícaro Combate icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=58940.0">
+                                Combate
+                            </a>
+                        </li>
+                        <li>
+                            <span class="rogue-assasin">
+                                <img loading="lazy" src="./asset/icons/rogue-assasin-icon.jpg"
+                                alt="Pícaro Asesinato icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=42490.0">
+                                Asesinato
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>Paladín
+                        <li>
+                            <span class="paladin-repre">
+                                <img loading="lazy" src="./asset/icons/paladin-repre-icon.jpg" 
+                                alt="Paladín Reprensión icon">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=38727.0">
+                                Reprensión
+                            </a>
+                        </li>
+                        <li>
+                            <span class="paladin-protect">
+                                <img loading="lazy" src="./asset/icons/paladin-protect-icon.jpg" 
+                                alt="Paladín Protección icon">
+                            </span>
+                            <a 
+                            target="_blank" href="http://www.wowaura.com/v2/foros/index.php?topic=45989.0">
+                                Protección
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div onclick="showRaidGuides()" class="navlist__guides">Guia de Bandas
+                <div id="container__raid-guides">
+                    <ul>Ciudadela de la <br>Corona de Hielo
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=y7GFOw38EDA&list=PLilcvPHd7OJ9pjg_6A4uMLvF6fFf5KAoP&ab_channel=%E2%9C%A9Sephiroth78%E2%9C%A9">
+                            10 Normal
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=oeU5N4CQaIY&ab_channel=StatesAndImmortal">
+                            10 Heroico
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=8eGMJ9g6aFw&list=PLWyyFcu7HkEhBBTI7AwosjRxF2PBq-WWW&ab_channel=Viinnsselchami">
+                            25 Normal
+                        </a>
+
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=FcXGOdiNxqc&list=PLWyyFcu7HkEjGEH4Dl39QM4zn2MAS39cE&ab_channel=Viinnsselchami">
+                            25 Heroico
+                        </a>
+                        </li>
+                    </ul>
+                    <ul>Sagrarío Rúby
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=7pbZwUiUSyY&ab_channel=Viinnsselchami">
+                            10 Normal
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=pa8MB6DQ4yE&ab_channel=Arashiki">
+                            10 Heroico
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=eCSIkM0iBWI&list=PLWyyFcu7HkEi3jEkIUobttF8jpm2qxqSK&ab_channel=Viinnsselchami">
+                            25 Normal
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=FAfEc-obAqs&ab_channel=StatesAndImmortal">
+                            25 Heroico
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>Naxramas
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=ffBc8JEoQgA&ab_channel=Alegos">
+                                10 Normal
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=ffBc8JEoQgA&ab_channel=Alegos">
+                                25 Normal
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>Prueba del Cruzado
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=Ygvwzz_D0XA&ab_channel=SoloWOW3.3.5a">
+                            10 Normal
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=A_RxOkwkvM8&t=2s&ab_channel=Muchamiel">
+                            10 Heroico
+                            </a>
+                        </li>
+
+                        <li>
+                            <a 
+                            target="_blank"href="https://www.youtube.com/watch?v=re1YDu4tUxA&ab_channel=Alegos">
+                            25 Normal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a 
+                            target="_blank" href="https://www.youtube.com/watch?v=re1YDu4tUxA&ab_channel=Alegos" >
+                            25 Heroico
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div onclick="showLevelingGuides()" class="navlist__guides">Guias de Leveo
+                <div id="container__leveling-guides">                 
+                    <ul>
+                        <li>
+                            <span class="aliance-logo">
+                                <img loading="lazy" src="./asset/icons/aliance-icon.jpg" 
+                                alt="logo de la alianza">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=33015.0">
+                            Alianza
+                            </a>
+                        </li>
+                        <li>
+                            <span class="horde-logo">
+                                <img loading="lazy" src="./asset/icons/horde-icon.webp" 
+                                alt="logo de la horda">
+                            </span>
+                            <a 
+                            target="_blank" href="https://www.wowaura.com/v2/foros/index.php?topic=35682.0">
+                            Horda
+                        </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--
+                TODO: Agregar Links y estilos 
+            <a class="navlist__guides" href="">Zona de addons</a>
+            -->
+
+    </aside>
+    
+    <script src="./script/data.js"></script>
+</body>
+</html>
