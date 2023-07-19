@@ -16,8 +16,13 @@ const links = {
 }
 //boton del header
 const headerButton = document.querySelector('#header-button');
-// 
+// barra de navegación
 const navList = document.querySelector('.navlist');
+
+containerRaidGuides.style.display = 'none'
+containerLevelingGuides.style.display = 'none'
+containerArticles.style.display = 'flex'
+containerClassGuides.style.display = 'none'
 
 
 // boton del header ( solo para movil )
